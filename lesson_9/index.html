@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" type="module"></script>
+  <link rel="stylesheet" href="/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Выберите действие</h1>
+  <form>
+    <select>
+      <option value="array">
+        Отфильтровать массив
+      </option>
+      <option value="email">
+        Найти имейл
+      </option>
+      <option value="brackets">
+        Найти текст в скобках
+      </option>
+      <option value="url">
+        Заменить URL на тег
+      </option>
+    </select>
+    <button type="submit">Выполнить</button>
+  </form>
+
+  <p class="task one">
+    Вам дан массив с именами файлов <br> ['module.jsx', 'index.html', 'style.css', 'index.js', 'file.ts', 'library.css', 'my.plugin.js'].<br>
+    Напишите функцию которая может перебрать такой массив и отфильтрует его оставив только имена файлов с расширениями .js .jsx .ts
+  </p>
+
+  <div class="task two visually-hidden">
+    <p>
+      Напишите регулярное выражение, которое находит email адреса:<br>
+      До символа @ email может содержать не менее одного символа класса \w.<br>
+      После символа @ и до .(точки), после которой начинается домен, может содержать только буквы и быть не короче трех символов.<br>
+      После .(точки) может содержать только буквы и быть от 2 до 5 символов в длину.<br>
+
+      Примеры валидные: info@methed.ru, max24@mail.com, java_script@google.io<br>
+      Примеры не валидные: my-mail@yandex.ru, tom_yam@ya.ru, zero@mai1.xyz
+    </p>
+
+    <form class="email-form"> 
+      <input type="text" value="test@yandex.ru" name="email" required>
+      <button type="submit">Проверить имейл</button>
+    </form>
+  </div>
+
+  <div class="task three visually-hidden">
+    <p>
+      Напишите регулярное выражение, которое находит текст в скобках
+    </p>
+
+    <form class="brackets-form"> 
+      <input type="text" value="Тест (вот) такой вот (идет) тут" name="brackets" required>
+      <button type="submit">Найти текст в скобках</button>
+    </form>
+  </div>
+
+  <div class="task four visually-hidden">
+    <p>
+      Напишите функцию которая принимает строку, в этой строке находит url адрес и заменяет с помощью replace на тег
+    </p>
+
+    <form class="url-form"> 
+      <input type="text" value="Тест http://site.ru тут" name="url" required>
+      <button type="submit">Заменить на тег</button>
+    </form>
+  </div>
+
+  <p class="result visually-hidden">
+
+  </p>
+</body>
+</html>
