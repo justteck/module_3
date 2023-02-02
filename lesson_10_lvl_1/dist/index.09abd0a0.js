@@ -566,8 +566,7 @@ var _createPageJs = require("./createPage.js");
 });
 // input card number
 (0, _createPageJs.inputNumber).addEventListener("input", (event)=>{
-    (0, _createPageJs.cardNumberPlate).textContent = event.target.value = event.target.value.replace(/\D/g, "").replace(/\d{4}/g, (str)=>`${str}-`);
-    if (event.target.value.length > 19) (0, _createPageJs.cardNumberPlate).textContent = event.target.value = event.target.value.slice(0, 19);
+    (0, _createPageJs.cardNumberPlate).textContent = event.target.value = event.target.value.replace(/\D/g, "").replace(/\d{4}/g, (str)=>`${str}-`).slice(0, 19);
 });
 // input card date
 (0, _createPageJs.inputExp).addEventListener("input", (event)=>{
@@ -575,10 +574,7 @@ var _createPageJs = require("./createPage.js");
     if (event.target.value.length === 0) (0, _createPageJs.cardExpPlate).textContent = "MM/YY";
 });
 // input card cvv
-(0, _createPageJs.inputCVV).addEventListener("input", (event)=>{
-    event.target.value = event.target.value.replace(/\D/g, "");
-    if (event.target.value.length > 3) event.target.value = event.target.value.slice(0, 3);
-});
+(0, _createPageJs.inputCVV).addEventListener("input", (event)=>event.target.value = event.target.value.replace(/\D/g, "").slice(0, 3));
 
 },{"./createPage.js":"2IeJ6"}],"2IeJ6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

@@ -22,12 +22,8 @@ inputName.addEventListener('input', (event) => {
 inputNumber.addEventListener('input', (event) => {
   cardNumberPlate.textContent = event.target.value = event.target.value.
       replace(/\D/g, '').
-      replace(/\d{4}/g, (str) => `${str}-`);
-
-  if (event.target.value.length > 19) {
-    cardNumberPlate.textContent = event.target.value =
-      event.target.value.slice(0, 19);
-  }
+      replace(/\d{4}/g, (str) => `${str}-`).
+      slice(0, 19);
 });
 
 // input card date
@@ -45,10 +41,5 @@ inputExp.addEventListener('input', (event) => {
 });
 
 // input card cvv
-inputCVV.addEventListener('input', (event) => {
-  event.target.value = event.target.value.replace(/\D/g, '');
-
-  if (event.target.value.length > 3) {
-    event.target.value = event.target.value.slice(0, 3);
-  }
-});
+inputCVV.addEventListener('input', (event) =>
+  event.target.value = event.target.value.replace(/\D/g, '').slice(0, 3));
