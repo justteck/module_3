@@ -1,0 +1,17 @@
+{
+  "name": "lesson_10_lvl_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "credit-card-input-mask": "^3.0.0",
+    "parcel": "^2.8.3",
+    "redom": "^3.29.1"
+  }
+}
